@@ -1,37 +1,18 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+import Base.Base;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class Ilia {
-
-    @BeforeClass
-    public void before() {
-        WebDriverManager.chromedriver().setup();
-    }
-
-    private WebDriver driver;
-
-    @BeforeMethod
-    public void beforeTest() {
-        driver = new ChromeDriver();
-    }
+public class Ilia extends Base {
 
     @Test
     public void test() {
 
-            driver.get("https://earnon.social");
-
-            WebElement logo = driver.findElement(By.className("logo"));
-
-            Assert.assertEquals(logo.getText(), "Earnon.social");
+        final String expectedLogoText = "Earnon.social";
+        driver.get("https://earnon.social");
+        WebElement logo = driver.findElement(By.className("logo"));
+        Assert.assertEquals(logo.getText(), expectedLogoText);
     }
 
-    @AfterMethod
-    public  void afterTest() {
-        driver.quit();
-    }
 }
