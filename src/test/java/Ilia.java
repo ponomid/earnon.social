@@ -11,7 +11,7 @@ public class Ilia extends Base {
 
         //11
 
-        final String expectedLogoText = "Earnon.social";
+        final String expectedLogoText = "Earnon.social2";
         driver.get("https://earnon.social");
         WebElement logo = driver.findElement(By.className("logo"));
         Assert.assertEquals(logo.getText(), expectedLogoText);
