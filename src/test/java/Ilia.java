@@ -8,6 +8,7 @@ public class Ilia extends Base {
 
     @Test
     public void test() {
+        //checkings
 
         final String expectedLogoText = "Earnon.social";
         driver.get("https://earnon.social");
