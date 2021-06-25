@@ -1,5 +1,6 @@
 package Model;
 
+import Base.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +17,19 @@ public class MainPage extends BasePage {
     @FindBy(linkText = "Sign In")
     private WebElement signIn;
 
+    @FindBy(linkText = "Sign Up")
+    private WebElement signUp;
+
     public SignInPage clickSignIn(){
         signIn.click();
 
         return new SignInPage(getDriver());
+    }
+
+    public SignUpPage clickSignUp() {
+        Utils.jsClick(getDriver(),signUp);
+
+        return new SignUpPage(getDriver());
     }
 
 

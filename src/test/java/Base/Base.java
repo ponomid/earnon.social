@@ -14,7 +14,9 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class Base {
 
-    protected WebDriver driver;
+    protected WebDriver getDriver() {
+        return getDriver();
+    }
 
     @BeforeClass
     protected void before() {
@@ -23,13 +25,14 @@ public abstract class Base {
 
     @BeforeMethod
     protected void beforeTest() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        getDriver().manage().window().maximize();
     }
 
     @AfterMethod
     protected  void afterTest() {
-        driver.quit();
+        getDriver().quit();
     }
+
+
 }
