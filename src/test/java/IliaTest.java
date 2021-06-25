@@ -1,12 +1,10 @@
 import Base.Base;
 import Model.MainPage;
 import Model.SignInPage;
-import Model.SignUpPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import org.testng.reporters.jq.Main;
 
 public class IliaTest extends Base {
 

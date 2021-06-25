@@ -25,12 +25,4 @@ public class MainPage extends BasePage {
 
         return new SignInPage(getDriver());
     }
-
-    public SignUpPage clickSignUp() {
-        Utils.jsClick(getDriver(),signUp);
-
-        return new SignUpPage(getDriver());
-    }
-
-
 }

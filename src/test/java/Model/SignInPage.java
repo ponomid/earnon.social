@@ -36,8 +36,4 @@ public class SignInPage extends MainPage {
         continueButton.click();
     }
 
-    public void clickForgotPassword() {
-        forgotPassButton.click();
-    }
-
 }
