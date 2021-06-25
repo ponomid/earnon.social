@@ -31,7 +31,7 @@ public class Ilia extends Base {
 
     @Test
     public void signInTest2() {
-//
+
         driver.get("https://earnon.social");
         driver.findElement(By.linkText("Sign In")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(login);
