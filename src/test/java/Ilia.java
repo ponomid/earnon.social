@@ -8,6 +8,9 @@ import org.testng.annotations.*;
 
 public class Ilia extends Base {
 
+    public final String login = "ponomid@ya.ru";
+    public final String password = "Smmtool88";
+
     @Test
     public void test() {
 
@@ -20,13 +23,10 @@ public class Ilia extends Base {
     @Test
     public void signInTest(){
 
-        MainPage mainPage = new MainPage(driver);
-        mainPage.clickSignIn();
-
-        SignInPage signInPage = new SignInPage(driver);
-        signInPage.fillEmail();
-        signInPage.fillPassword();
-        signInPage.clickContinue();
+        SignInPage signInPage = new MainPage(driver)
+                .clickSignIn()
+                .fillEmail(login)
+                .fillPassword(password);
     }
 
     @Test

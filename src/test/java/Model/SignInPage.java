@@ -7,28 +7,28 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignInPage extends BasePage {
 
-    public final String login = "ponomid@ya.ru";
-    public final String password = "Smmtool88";
-
     @FindBy(id = "username")
     private WebElement emailField;
 
     @FindBy(id = "password")
     private WebElement passwordField;
 
-    @FindBy(xpath = "//button[contains(text(),'Continue')]")
+    @FindBy(xpath = "//button[@name='action']")
     private WebElement continueButton;
 
     public SignInPage(WebDriver driver) {
         super(driver);
     }
 
-    public void fillEmail() {
-        emailField.sendKeys(login);
+    public SignInPage fillEmail(String value) {
+
+        emailField.sendKeys(value);
+        return this;
     }
 
-    public void fillPassword() {
-        passwordField.sendKeys(password);
+    public SignInPage fillPassword(String value) {
+        passwordField.sendKeys(value);
+        return this;
     }
 
     public void clickContinue() {
