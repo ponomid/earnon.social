@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignInPage extends BasePage {
+public class SignInPage extends MainPage {
 
     @FindBy(id = "username")
     private WebElement emailField;
@@ -20,7 +20,6 @@ public class SignInPage extends BasePage {
     }
 
     public SignInPage fillEmail(String value) {
-
         emailField.sendKeys(value);
         return this;
     }

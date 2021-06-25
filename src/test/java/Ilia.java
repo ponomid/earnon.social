@@ -34,5 +34,8 @@ public class Ilia extends Base {
 
         driver.get("https://earnon.social");
         driver.findElement(By.linkText("Sign In")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys(login);
+        driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.xpath("//button[@name='action']"));
     }
 }
