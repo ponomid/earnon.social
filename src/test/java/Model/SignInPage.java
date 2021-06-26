@@ -15,8 +15,6 @@ public class SignInPage extends MainPage {
     @FindBy(xpath = "//button[@name='action']")
     private WebElement continueButton;
 
-    @FindBy(linkText = "Forgot password?")
-    private WebElement forgotPassButton;
 
     public SignInPage(WebDriver driver) {
         super(driver);
