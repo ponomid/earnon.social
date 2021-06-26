@@ -23,7 +23,7 @@ public class IliaTest extends Base {
 
     @Test
     public void testSignIn() {
-//not working
+
         UspsPage uspsPage = new MainPage(getDriver())
                 .clickSignIn()
                 .fillEmail(login)

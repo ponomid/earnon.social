@@ -42,6 +42,4 @@ public abstract class Base {
     protected  void afterTest() {
         getDriver().quit();
     }
-
-
 }
