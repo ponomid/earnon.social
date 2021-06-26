@@ -22,11 +22,20 @@ public class IliaTest extends Base {
 
     @Test
     public void testSignIn() {
-
+//not working
         SignInPage signInPage = new MainPage(getDriver())
                 .clickSignIn()
                 .fillEmail(login)
                 .fillPassword(password);
+    }
+
+    @Test
+    public void testSignInTwo() {
+//not working
+        getDriver().get("https://earnon.social");
+        getDriver().findElement(By.linkText("Sign In")).click();
+        getDriver().findElement(By.xpath("//input[@id='username']")).sendKeys(login);
+        getDriver().findElement(By.id("password")).sendKeys(password);
     }
 }
 
