@@ -32,7 +32,6 @@ public class IliaTest extends Base {
     @Test
     public void testSignInTwo() {
 //not working
-        getDriver().get("https://earnon.social");
         getDriver().findElement(By.linkText("Sign In")).click();
         getDriver().findElement(By.xpath("//input[@id='username']")).sendKeys(login);
         getDriver().findElement(By.id("password")).sendKeys(password);

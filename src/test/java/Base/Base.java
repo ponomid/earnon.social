@@ -20,6 +20,10 @@ public abstract class Base {
         return driver;
     }
 
+    protected void loginWeb() {
+        driver.get("https://earnon.social");
+    }
+
     @BeforeClass
     protected void before() {
         WebDriverManager.chromedriver().setup();
@@ -29,6 +33,7 @@ public abstract class Base {
     protected void beforeTest() {
         driver = new ChromeDriver();
         getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        loginWeb();
         getDriver().manage().window().maximize();
     }
 

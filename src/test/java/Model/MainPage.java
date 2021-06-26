@@ -11,7 +11,6 @@ public class MainPage extends BasePage {
 
     public MainPage(WebDriver driver) {
         super(driver);
-        driver.get("https://earnon.social");
     }
 
     @FindBy(linkText = "Sign In")
