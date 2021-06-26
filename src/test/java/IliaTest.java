@@ -1,6 +1,7 @@
 import Base.Base;
 import Model.MainPage;
 import Model.SignInPage;
+import Model.UspsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,8 +9,8 @@ import org.testng.annotations.*;
 
 public class IliaTest extends Base {
 
-    public final String login = "ponomid@ya.ru";
-    public final String password = "Smmtool88";
+    public final String login = "morozova.mary";
+    public final String password = "erLt-22p/";
 
     @Test
     public void testFirst() {
@@ -23,10 +24,11 @@ public class IliaTest extends Base {
     @Test
     public void testSignIn() {
 //not working
-        SignInPage signInPage = new MainPage(getDriver())
+        UspsPage uspsPage = new MainPage(getDriver())
                 .clickSignIn()
                 .fillEmail(login)
-                .fillPassword(password);
+                .fillPassword(password)
+                .clickSubmit();
     }
 
     @Test

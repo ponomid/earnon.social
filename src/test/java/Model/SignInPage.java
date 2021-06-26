@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignInPage extends MainPage {
 
-    @FindBy(id = "username")
+    @FindBy(xpath = "//input[@id='username']")
     private WebElement emailField;
 
-    @FindBy(id = "password")
+    @FindBy(xpath = "//input[@id='password']")
     private WebElement passwordField;
 
-    @FindBy(xpath = "//button[@name='action']")
-    private WebElement continueButton;
+    @FindBy(id = "btn-submit")
+    private WebElement submit;
 
     @FindBy(linkText = "Forgot password?")
     private WebElement forgotPassButton;
@@ -32,8 +32,10 @@ public class SignInPage extends MainPage {
         return this;
     }
 
-    public void clickContinue() {
-        continueButton.click();
+    public UspsPage clickSubmit() {
+
+        submit.click();
+        return new UspsPage(getDriver());
     }
 
 }

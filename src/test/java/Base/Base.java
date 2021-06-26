@@ -28,8 +28,14 @@ public abstract class Base {
     @BeforeMethod
     protected void beforeTest() {
         driver = new ChromeDriver();
+        loginWeb();
         getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         getDriver().manage().window().maximize();
+    }
+
+    protected void loginWeb(){
+        driver.get("https://www.usps.com");
+        //driver.get("https://earnon.social");
     }
 
     @AfterMethod
