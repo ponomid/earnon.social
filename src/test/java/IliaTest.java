@@ -19,7 +19,7 @@ public class IliaTest extends Base {
         WebElement logo = getDriver().findElement(By.className("logo"));
         Assert.assertEquals(logo.getText(), expectedLogoText);
     }
-////
+
     @Test
     public void testSignIn() {
 //not working
